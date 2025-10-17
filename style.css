@@ -1,0 +1,139 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background: #9acbff;
+  color: white;
+}
+
+/* Başlıklar */
+h1,
+h2,
+h3 {
+  font-family: 'Caveat Brush', cursive;
+  color: #004b91;
+}
+
+/* Arama kapsayıcı */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+/* Arama wrapper: input ve buton */
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50px; /* Başta sadece buton kadar */
+  transition: width 0.3s ease;
+}
+
+/* Aktif olduğunda input açılır */
+.search-wrapper.active {
+  width: 250px;
+}
+
+/* Input */
+.searchInput {
+  width: 0;
+  padding: 10px 40px 10px 15px; /* Sağda buton için boşluk */
+  border-radius: 12px;
+  border: 2px solid #9acbff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  height: 40px;
+}
+
+.search-wrapper.active .searchInput {
+  width: 100%;
+  opacity: 1;
+}
+
+.searchInput:focus {
+  border-color: #0057b7;
+  box-shadow: 0 0 8px rgba(0, 87, 183, 0.3);
+}
+
+/* Arama butonu (dürbün) */
+.searchBtn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: #9acbff;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.searchBtn i {
+  font-size: 25px;
+  color: #1c1c1c;
+}
+
+/* Kartlar: grid 3 kolona kadar */
+.country-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+
+/* Kart */
+.country {
+  background: #e1f0ff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  color: #004b91;
+  transition: transform 0.2s ease;
+}
+
+.country:hover {
+  transform: scale(1.03);
+}
+
+.country img {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.country-info h3 {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+/* Kart alt bilgiler */
+.small {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.95rem;
+}
+
+.small i {
+  margin-right: 5px;
+  color: #0057b7;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Country Guide</title>
+  </head>
+  <body>
+    <h1>Country Guide</h1>
+
+    <div class="search">
+      <div class="search-wrapper">
+        <input type="text" class="searchInput" placeholder="Ülke adı gir..." />
+        <button class="searchBtn">
+          <i class="fa-solid fa-binoculars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Country kartları bu container içinde JS ile oluşturulacak -->
+    <div class="country-container"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
